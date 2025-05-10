@@ -2,6 +2,7 @@
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/title.png?raw=true)
 
 ## Project Overview
+## ER Diagram
 
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/zomato_erd.png?raw=true)
 ## 📄 Licence
