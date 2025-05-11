@@ -49,7 +49,7 @@ CREATE TABLE menu (
     f_id VARCHAR,                        -- Foreign key to food(f_id)
     cuisine VARCHAR,                     -- Cuisine type
     price VARCHAR,                       -- VARCHAR for now; will be changed to FLOAT later
-	PRIMARY KEY (unnamed, menu_id)
+    PRIMARY KEY (unnamed, menu_id)
 );
 
 -- 5. orders.csv
