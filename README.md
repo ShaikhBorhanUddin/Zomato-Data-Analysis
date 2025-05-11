@@ -20,7 +20,7 @@ Zomato_Data_Analysis/
 ├── Dataset/                                    # Contains raw CSV and ZIP files
 ├── Images/                                     # ERD, visualization, title images
 ├── SQL/                                        # SQL scripts for this project
-├── Solutions/                                  # Details solutions, outputs with corresponding visualizations
+├── Solutions/                                  # Details solutions, outputs with visualizations
 ├── Requirements.txt                            # Project requirements
 ├── README.md                                   # Overvier of the project
 └── Licence                                     # Licence details
