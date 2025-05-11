@@ -28,6 +28,22 @@ Zomato_Data_Analysis/
 ## 🔄 Workflow
 
 ## ❓ Analytic Questions
+1. What are the top 10 restaurants by total sales amount?
+2. What is the average rating and total rating count for restaurants in the top 20 cities?
+3. What are the monthly order trends based on order volume over time?
+4. What are the top 5 most popular cuisines by order volume?
+5. What is the distribution of vegetarian vs non-vegetarian items ordered?
+6. What are the top 20 cities by the number of restaurants?
+7. How do different user demographics correlate with average order value?
+8. Who are the top 15 highest-spending users?
+9. What are the top 15 cuisines with the highest average menu prices?
+10. Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
+11. What are the most ordered food items across all restaurants?
+12. How does spending behavior differ between genders?
+13. On which days of the week do restaurants experience peak order volumes?
+14. How does order frequency vary across different income groups?
+
+Solving these 14 analytic questions is essential for business intelligence and analytics as they provide valuable insights into various aspects of restaurant operations, customer behavior, and market trends. By analyzing top performers, customer satisfaction, order trends, menu preferences, and demographic influences, businesses can optimize pricing strategies, marketing campaigns, and operational efficiency. Understanding factors such as peak order times, menu diversity, and the relationship between income and order frequency helps companies make data-driven decisions, tailor offerings to customer segments, improve inventory management, and identify growth opportunities. Ultimately, these insights enable businesses to enhance customer experience, increase profitability, and maintain a competitive edge in a dynamic market.
 
 ## 🔍 Sample SQL Queries
 
