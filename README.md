@@ -27,6 +27,20 @@ Zomato_Data_Analysis/
 ```
 ## 🔄 Workflow
 
+The following steps outline the end-to-end workflow for this project:
+
+- **SQL Table Formation** : Database schema is designed and SQL tables are created based on the structure of the CSV files using appropriate data types and primary keys.
+
+- **Data Upload (CSV Files)** : Raw datasets are imported into the respective SQL tables using COPY or \COPY commands (PostgreSQL) or relevant database import methods.
+
+- **Data Cleaning** : Unnecessary nulls, duplicates, and inconsistencies are handled using SQL scripts to ensure data quality and integrity before analysis.
+
+- **Foreign Key Formation** : Relationships are established between tables by defining foreign key constraints to maintain referential integrity and enable relational queries.
+
+- **SQL Queries** : Complex SQL queries are written to extract insights such as sales trends, customer behavior, and product performance across various dimensions.
+
+- **Result Visualization with Tableau** : The query results are connected to Tableau for interactive dashboards and visualizations to effectively communicate key business insights.
+
 ## ❓ Analytic Questions
 1. What are the top 10 restaurants by total sales amount?
 2. What is the average rating and total rating count for restaurants in the top 20 cities?
