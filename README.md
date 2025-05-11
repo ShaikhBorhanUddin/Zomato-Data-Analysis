@@ -14,7 +14,17 @@ The primary key for the restaurant table is `id`, which is in INT format. Both t
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/zomato_erd.png?raw=true)
 
 ## 📂 Folder Structure
-
+```bash
+Zomato_Data_Analysis/
+│
+├── Dataset/                                    # Contains raw CSV and ZIP files
+├── Images/                                     # ERD, visualization, title images
+├── SQL/                                        # SQL scripts for this project
+├── Solutions/                                  # Details solutions, outputs with corresponding visualizations
+├── Requirements.txt                            # Project requirements
+├── README.md                                   # Overvier of the project
+└── Licence                                     # Licence details
+```
 ## 🔄 Workflow
 
 ## ❓ Analytic Questions
