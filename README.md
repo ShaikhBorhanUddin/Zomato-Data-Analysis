@@ -5,10 +5,7 @@
 
 ## 📦 Dataset, Visualization & Data Cleaning
 
-The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle. A brief overview of the dataset is given in the following table.
-
-## 🗂️ Dataset Overview
-
+The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle. A brief overview of the dataset with key columns and description is given in the following table.
 | Table Name      | No. of Columns | Key Columns                        | Description                                                                 |
 |------------------|----------------|------------------------------------|-----------------------------------------------------------------------------|
 | `food.csv`       | 4              | `f_id`, `item`, `veg_or_non_veg`   | Contains unique food items and their vegetarian classification.            |
