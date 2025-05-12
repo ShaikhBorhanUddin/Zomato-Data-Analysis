@@ -165,7 +165,7 @@ Pie chart visualizations focus on cuisine. The graph on the left presents the di
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_11.png?raw=true" alt="Visualization 11" width="49.5%" />
 </p>
 
-The last two visualizations were shown in treemaps. The first graph visualizes the **number of orders by day of the week**, revealing that weekends (Friday to Sunday) see significantly higher order volumes compared to weekdays. This pattern suggests that customers are more likely to order food on weekends, potentially due to more leisure time or social activities. The second graph shows **order frequency by time of day**, highlighting peak order times during **lunch (12 PM to 2 PM)** and **dinner (7 PM to 9 PM)** hours. This indicates that customers tend to place more orders during traditional meal times, which can help restaurants optimize their operations during these peak periods.
+The last two visualizations were shown in treemaps. The first graph visualizes the **number of orders by day of the week**, revealing that weekends (Friday to Sunday) see significantly higher order volumes compared to weekdays. This pattern suggests that customers are more likely to order food on weekends, potentially due to more leisure time or social activities. The second graph shows **order frequency by time of day**, highlighting peak order times during **lunch (12 PM to 2 PM)** and **dinner (7 PM to 9 PM)** hours. This indicates that **customers tend to place more orders during traditional meal times**, which can help restaurants optimize their operations during these peak periods.
 
 ## ✅ Key Takeaway
 
