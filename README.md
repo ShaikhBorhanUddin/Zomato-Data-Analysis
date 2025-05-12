@@ -89,7 +89,77 @@ The following steps outline the end-to-end workflow for this project:
 Solving these 14 analytic questions is essential for business intelligence and analytics as they provide valuable insights into various aspects of restaurant operations, customer behavior, and market trends. By analyzing top performers, customer satisfaction, order trends, menu preferences, and demographic influences, businesses can optimize pricing strategies, marketing campaigns, and operational efficiency. Understanding factors such as peak order times, menu diversity, and the relationship between income and order frequency helps companies make data-driven decisions, tailor offerings to customer segments, improve inventory management, and identify growth opportunities. Ultimately, these insights enable businesses to enhance customer experience, increase profitability, and maintain a competitive edge in a dynamic market.
 
 ## 🔍 Sample SQL Queries
+```sql
+-- 2. Average Rating and Rating Count by top 20 City
 
+SELECT 
+    city,
+    AVG(rating) AS avg_rating,
+    AVG(
+        CASE 
+            WHEN rating_count = 'Too Few Ratings' THEN 10
+            WHEN rating_count = '20+ ratings' THEN 25
+            WHEN rating_count = '50+ ratings' THEN 55
+            WHEN rating_count = '100+ ratings' THEN 110
+            ELSE NULL
+        END
+    ) AS avg_rating_count_est
+FROM restaurant
+WHERE rating IS NOT NULL
+GROUP BY city
+ORDER BY avg_rating DESC
+LIMIT 20;
+```
+```sql
+-- 8. High-Spending Users (Top 15)
+
+WITH user_spending AS (
+    SELECT user_id, SUM(sales_amount) AS total_spent
+    FROM orders
+    GROUP BY user_id
+),
+percentile_value AS (
+    SELECT PERCENTILE_CONT(0.99) WITHIN GROUP (ORDER BY total_spent) AS threshold
+    FROM user_spending
+)
+SELECT us.user_id, us.total_spent
+FROM user_spending us, percentile_value p
+WHERE us.total_spent > p.threshold
+LIMIT 15;
+```
+```sql
+-- 10. Restaurants Offering the Most Diverse Menu
+
+SELECT r.name, COUNT(DISTINCT m.f_id) AS item_count
+FROM restaurant r
+JOIN menu m ON r.id = m.r_id
+GROUP BY r.name
+ORDER BY item_count DESC
+LIMIT 10;
+```
+```sql
+-- 13. Peak Ordering Days
+
+SELECT 
+  TRIM(TO_CHAR(order_date, 'Day')) AS weekday,
+  EXTRACT(DOW FROM order_date) AS weekday_num,
+  COUNT(*) AS total_orders,
+  SUM(sales_amount) AS total_sales
+FROM orders
+GROUP BY weekday, weekday_num
+ORDER BY weekday_num;
+```
+```sql
+-- 14. Income Group vs Order Frequency
+
+SELECT 
+  u.Monthly_Income, 
+  COUNT(o.*) AS order_count
+FROM users u
+JOIN orders o ON u.user_id = o.user_id
+GROUP BY u.Monthly_Income
+ORDER BY order_count DESC;
+```
 ## 📊 Tableau Visualization
 
 ## ✅ Key Takeaway
