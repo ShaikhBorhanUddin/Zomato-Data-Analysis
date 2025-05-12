@@ -140,6 +140,8 @@ GROUP BY r.name
 ORDER BY item_count DESC
 LIMIT 10;
 ```
+This SQL query finds the top 10 restaurants offering the most diverse menus. It joins the `restaurant` table with the `menu` table using the restaurant ID `(r.id = m.r_id)`, then counts the number of **distinct food items** (`f_id`) each restaurant offers. The results are grouped by restaurant name, sorted in descending order by the number of unique menu items (`item_count`), and limited to the top 10—highlighting restaurants with the broadest variety of offerings.
+
 ```sql
 -- 13. Peak Ordering Days
 
