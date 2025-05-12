@@ -30,9 +30,47 @@ LIMIT 10;
 
 ## Solution
 ```SQL
-
+SELECT 
+    city,
+    AVG(rating) AS avg_rating,
+    AVG(
+        CASE 
+            WHEN rating_count = 'Too Few Ratings' THEN 10
+            WHEN rating_count = '20+ ratings' THEN 25
+            WHEN rating_count = '50+ ratings' THEN 55
+            WHEN rating_count = '100+ ratings' THEN 110
+            ELSE NULL
+        END
+    ) AS avg_rating_count_est
+FROM restaurant
+WHERE rating IS NOT NULL
+GROUP BY city
+ORDER BY avg_rating DESC
+LIMIT 20;
 ```
 ## Output
+|city                            |avg_rating          |avg_rating_count_est  |
+|--------------------------------|--------------------|----------------------|
+|Chopda                          |4.825               |25.0000000000000000   |
+|Kumta                           |4.8                 |55.0000000000000000   |
+|Kadayanallur                    |4.525               |25.0000000000000000   |
+|Dhanbad                         |4.4                 |55.0000000000000000   |
+|Kidderpore,Kolkata              |4.340000000000001   |65.0000000000000000   |
+|Fatehgarh-sahib                 |4.339999999999999   |42.0000000000000000   |
+|Thiruvalla                      |4.25                |55.0000000000000000   |
+|Mylapore,Chennai                |4.2276595744680865  |72.6973684210526316   |
+|South Kolkata,Kolkata           |4.2237918215613375  |73.7614678899082569   |
+|Frazer Town,Bangalore           |4.219512195121951   |71.0714285714285714   |
+|Adyar,Chennai                   |4.218141592920354   |75.2777777777777778   |
+|Mahalaxmi Malabar Hill,Mumbai   |4.213207547169811   |64.1584158415841584   |
+|Bandra West,Mumbai              |4.20484693877551    |64.7814207650273224   |
+|Majestic,Bangalore              |4.202173913043478   |56.2500000000000000   |
+|Jagdalpur                       |4.2                 |40.0000000000000000   |
+|Budhwal                         |4.2                 |25.0000000000000000   |
+|LalDarwaja,Ahmedabad            |4.2                 |110.0000000000000000  |
+|Burrabazar,Kolkata              |4.194871794871796   |71.9444444444444444   |
+|Central Bangalore,Bangalore     |4.18981818181818    |68.1526104417670683   |
+|Nungambakkam,Chennai            |4.189534883720927   |66.8531468531468531   |
 
 ## Visualization
 ![Dashboard](?raw=true)
