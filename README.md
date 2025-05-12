@@ -14,7 +14,26 @@ The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) i
 | `restaurant.csv` | <p align="center">12</p>             | `id`, `name`, `city`, `rating`     | Information about each restaurant: name, location, ratings, cuisines, and licensing details. |
 | `users.csv`      | <p align="center">12</p>             | `user_id`, `Age`, `Gender`         | User demographics including age, income, education, and family size.       |
 
-https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/veg_vs_non_veg.png
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/veg_vs_non_veg.png?raw=true" alt="Veg vs Non-Veg" width="30%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/distribution_of%20_cuisine.png?raw=true" alt="Cuisine Distribution" width="35.09%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/price_groups.png?raw=true" alt="Price Groups" width="31.32%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/price-groups_bar.png?raw=true" alt="Price Groups Bar" width="28.72%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/top_20_f_id.png?raw=true" alt="Top 20 Food IDs" width="34.5%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/top_20_r_id.png?raw=true" alt="Top 20 Restaurant IDs" width="34.5%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/top_20_order_date.png?raw=true" alt="Top 20 Order Dates" width="32.5%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/order_count_y_and_m.png?raw=true" alt="Order Count by Year and Month" width="38%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/order_count_day.png?raw=true" alt="Order Count by Day" width="27%" />
+</p>
+
+For more details and python codes for visualizations, click the [link](https://colab.research.google.com/drive/1HsaqNjhSE_akLOapiRKfzaz7DPkM3cNT?usp=sharing).
+
 ### 🧹 Data Cleaning Steps
 
 ### 🧱 ER Diagram
