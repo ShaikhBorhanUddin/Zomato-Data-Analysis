@@ -144,11 +144,14 @@ ORDER BY order_count DESC;
 The last  SQL query inclued in this section examines the relationship between **monthly income levels** and **order frequency**. It joins the `users` and `orders` tables using `user_id`, then groups the data by each user's `Monthly_Income`. For each income group, it counts the total number of orders placed (`order_count`). The results are ordered in descending order of order count, revealing which income brackets tend to place more orders—helpful for understanding purchasing behavior across income levels.
 
 ## 📊 Tableau Visualization
+For every SQL query, results are visualized in Tableau. Some of these visualizations are included here with explanations.
 
 <p align="center">
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_1.png?raw=true" alt="Visualization 1" width="49.5%" />
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_3.png?raw=true" alt="Visualization 3" width="49%" />
 </p>
+
+The first graph (on the left) shows a bar chart of user spending distribution, where most users have spent less than ₹10,000, and only a few exceed that amount, highlighting a sharp decline in high spenders. This indicates that while the majority of customers are low to mid-range spenders, a small segment accounts for significantly higher purchases. The second graph (on the right) illustrates the number of orders across different monthly income groups, showing a clear trend where users with higher incomes—particularly those earning ₹50,000 and above—tend to place more orders. This reflects a positive correlation between income level and order frequency.
 
 <p align="center">
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_4.png?raw=true" alt="Visualization 4" width="49.4%" />
