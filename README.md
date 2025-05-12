@@ -167,6 +167,8 @@ JOIN orders o ON u.user_id = o.user_id
 GROUP BY u.Monthly_Income
 ORDER BY order_count DESC;
 ```
+The last  SQL query inclued in this section examines the relationship between **monthly income levels** and **order frequency**. It joins the `users` and `orders` tables using `user_id`, then groups the data by each user's `Monthly_Income`. For each income group, it counts the total number of orders placed (`order_count`). The results are ordered in descending order of order count, revealing which income brackets tend to place more orders—helpful for understanding purchasing behavior across income levels.
+
 ## 📊 Tableau Visualization
 
 <p align="center">
