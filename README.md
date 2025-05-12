@@ -14,6 +14,7 @@ The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) i
 | `restaurant.csv` | <p align="center">12</p>             | `id`, `name`, `city`, `rating`     | Information about each restaurant: name, location, ratings, cuisines, and licensing details. |
 | `users.csv`      | <p align="center">12</p>             | `user_id`, `Age`, `Gender`         | User demographics including age, income, education, and family size.       |
 
+https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/veg_vs_non_veg.png
 ### 🧹 Data Cleaning Steps
 
 ### 🧱 ER Diagram
