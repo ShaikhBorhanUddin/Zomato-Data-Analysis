@@ -6,13 +6,13 @@
 ## 📦 Dataset, Visualization & Data Cleaning
 
 The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle. A brief overview of the dataset with key columns and description is given in the following table.
-| Table Name      | Columns         | Key Columns                        | Description                                                                 |
-|------------------|----------------|------------------------------------|-----------------------------------------------------------------------------|
-| `food.csv`       | 4              | `f_id`, `item`, `veg_or_non_veg`   | Contains unique food items and their vegetarian classification.            |
-| `menu.csv`       | 6              | `menu_id`, `f_id`, `r_id`, `price` | Maps food items to restaurant menus, including price and cuisine type.     |
-| `orders.csv`     | 7              | `order_date`, `user_id`, `r_id`    | Records order transactions including sales amount, quantity, and date.     |
-| `restaurant.csv` | 12             | `id`, `name`, `city`, `rating`     | Information about each restaurant: name, location, ratings, cuisines, and licensing details. |
-| `users.csv`      | 12             | `user_id`, `Age`, `Gender`         | User demographics including age, income, education, and family size.       |
+| Table Name       | Columns                              | Key Columns                        | Description                                                                 |
+|------------------|--------------------------------------|------------------------------------|-----------------------------------------------------------------------------|
+| `food.csv`       | <p align="center">4</p>              | `f_id`, `item`, `veg_or_non_veg`   | Contains unique food items and their vegetarian classification.            |
+| `menu.csv`       | <p align="center">6</p>              | `menu_id`, `f_id`, `r_id`, `price` | Maps food items to restaurant menus, including price and cuisine type.     |
+| `orders.csv`     | <p align="center">7</p>              | `order_date`, `user_id`, `r_id`    | Records order transactions including sales amount, quantity, and date.     |
+| `restaurant.csv` | <p align="center">12</p>             | `id`, `name`, `city`, `rating`     | Information about each restaurant: name, location, ratings, cuisines, and licensing details. |
+| `users.csv`      | <p align="center">12</p>             | `user_id`, `Age`, `Gender`         | User demographics including age, income, education, and family size.       |
 
 ### 🧹 Data Cleaning Steps
 
