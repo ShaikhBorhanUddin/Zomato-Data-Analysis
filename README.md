@@ -158,6 +158,8 @@ The first graph (on the left) shows a bar chart of user spending distribution, w
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_5.png?raw=true" alt="Visualization 5" width="49.4%" />
 </p>
 
+Pie chart visualizations focus on cuisine. The graph on the left presents the distribution of order counts by different restaurant categories, showing which types of restaurants receive the most orders. It highlights that categories such as "Casual Dining" and "Quick Bites" have the highest order volumes, suggesting that these types of establishments are the most popular among customers. The second graph compares the average order value across various restaurant categories. It reveals that "Fine Dining" restaurants have the highest average order value, indicating that customers are willing to spend more at higher-end establishments, while categories like "Quick Bites" and "Casual Dining" have relatively lower average spends. These insights offer a deeper understanding of customer preferences across different dining experiences.
+
 <p align="center">
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_10.png?raw=true" alt="Visualization 10" width="49.5%" />
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_11.png?raw=true" alt="Visualization 11" width="49.5%" />
