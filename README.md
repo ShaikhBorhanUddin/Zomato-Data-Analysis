@@ -127,6 +127,9 @@ FROM user_spending us, percentile_value p
 WHERE us.total_spent > p.threshold
 LIMIT 15;
 ```
+
+The SQL query above identifies the top 15 high-spending users who exceed the 99th percentile in total purchase amount. It first calculates each user's total spending using a `user_spending` CTE by summing `sales_amount` from the orders table grouped by `user_id`. Then, it computes the 99th percentile threshold using the `PERCENTILE_CONT(0.99)` function in a second CTE called `percentile_value`. Finally, it selects users whose total spending is greater than this threshold, orders them in descending order of spending, and limits the result to the top 15 users—highlighting the most valuable customers in the dataset.
+
 ```sql
 -- 10. Restaurants Offering the Most Diverse Menu
 
