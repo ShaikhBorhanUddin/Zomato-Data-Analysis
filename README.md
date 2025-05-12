@@ -5,6 +5,18 @@
 
 ## 📦 Dataset, Visualization & Data Cleaning
 
+The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle.
+
+## 🗂️ Dataset Overview
+
+| Table Name      | No. of Columns | Key Columns                        | Description                                                                 |
+|------------------|----------------|------------------------------------|-----------------------------------------------------------------------------|
+| `food.csv`       | 4              | `f_id`, `item`, `veg_or_non_veg`   | Contains unique food items and their vegetarian classification.            |
+| `menu.csv`       | 6              | `menu_id`, `f_id`, `r_id`, `price` | Maps food items to restaurant menus, including price and cuisine type.     |
+| `orders.csv`     | 7              | `order_date`, `user_id`, `r_id`    | Records order transactions including sales amount, quantity, and date.     |
+| `restaurant.csv` | 12             | `id`, `name`, `city`, `rating`     | Information about each restaurant: name, location, ratings, cuisines, and licensing details. |
+| `users.csv`      | 12             | `user_id`, `Age`, `Gender`         | User demographics including age, income, education, and family size.       |
+
 ### 🧹 Data Cleaning Steps
 
 ### 🧱 ER Diagram
