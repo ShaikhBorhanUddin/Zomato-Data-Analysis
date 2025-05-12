@@ -27,15 +27,145 @@ LIMIT 10;
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_1.png?raw=true)
 
 # Q2: What is the average rating and total rating count for restaurants in the top 20 cities?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q3: What are the monthly order trends based on order volume over time?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q4: What are the top 5 most popular cuisines by order volume?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q5:What is the distribution of vegetarian vs non-vegetarian items ordered?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q6: What are the top 20 cities by the number of restaurants?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q7: How do different user demographics correlate with average order value?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q8: Who are the top 15 highest-spending users?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q9: What are the top 15 cuisines with the highest average menu prices?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q10: Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q11: What are the most ordered food items across all restaurants?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q12: How does spending behavior differ between genders?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q13: On which days of the week do restaurants experience peak order volumes?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
 # Q14: How does order frequency vary across different income groups?
+
+## Solution
+```SQL
+
+```
+## Output
+
+## Visualization
+![Dashboard](?raw=true)
+
