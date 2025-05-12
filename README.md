@@ -162,6 +162,21 @@ ORDER BY order_count DESC;
 ```
 ## 📊 Tableau Visualization
 
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_1.png?raw=true" alt="Visualization 1" width="49.5%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_3.png?raw=true" alt="Visualization 3" width="49%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_4.png?raw=true" alt="Visualization 4" width="49.4%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_5.png?raw=true" alt="Visualization 5" width="49.4%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_10.png?raw=true" alt="Visualization 10" width="49.5%" />
+  <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_11.png?raw=true" alt="Visualization 11" width="49.5%" />
+</p>
+
 ## ✅ Key Takeaway
 
 ## 💡 Tools & Technology Used
