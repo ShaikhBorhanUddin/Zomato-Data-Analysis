@@ -5,7 +5,7 @@
 
 ## 📦 Dataset, Visualization & Data Cleaning
 
-The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle.
+The [dataset](https://www.kaggle.com/datasets/anas123siddiqui/zomato-database) is sourced from Kaggle. A brief overview of the dataset is given in the following table.
 
 ## 🗂️ Dataset Overview
 
