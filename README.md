@@ -89,30 +89,10 @@ The following steps outline the end-to-end workflow for this project:
 Solving these 14 analytic questions is essential for business intelligence and analytics as they provide valuable insights into various aspects of restaurant operations, customer behavior, and market trends. By analyzing top performers, customer satisfaction, order trends, menu preferences, and demographic influences, businesses can optimize pricing strategies, marketing campaigns, and operational efficiency. Understanding factors such as peak order times, menu diversity, and the relationship between income and order frequency helps companies make data-driven decisions, tailor offerings to customer segments, improve inventory management, and identify growth opportunities. Ultimately, these insights enable businesses to enhance customer experience, increase profitability, and maintain a competitive edge in a dynamic market.
 
 ## 🔍 Sample SQL Queries
-```sql
--- 2. Average Rating and Rating Count by top 20 City
 
-SELECT 
-    city,
-    AVG(rating) AS avg_rating,
-    AVG(
-        CASE 
-            WHEN rating_count = 'Too Few Ratings' THEN 10
-            WHEN rating_count = '20+ ratings' THEN 25
-            WHEN rating_count = '50+ ratings' THEN 55
-            WHEN rating_count = '100+ ratings' THEN 110
-            ELSE NULL
-        END
-    ) AS avg_rating_count_est
-FROM restaurant
-WHERE rating IS NOT NULL
-GROUP BY city
-ORDER BY avg_rating DESC
-LIMIT 20;
-```
-```sql
--- 8. High-Spending Users (Top 15)
+Some SQL queries are showcased in this section with codes explained.
 
+```sql
 WITH user_spending AS (
     SELECT user_id, SUM(sales_amount) AS total_spent
     FROM orders
@@ -131,8 +111,6 @@ LIMIT 15;
 The SQL query above identifies the top 15 high-spending users who exceed the 99th percentile in total purchase amount. It first calculates each user's total spending using a `user_spending` CTE by summing `sales_amount` from the orders table grouped by `user_id`. Then, it computes the 99th percentile threshold using the `PERCENTILE_CONT(0.99)` function in a second CTE called `percentile_value`. Finally, it selects users whose total spending is greater than this threshold, orders them in descending order of spending, and limits the result to the top 15 users—highlighting the most valuable customers in the dataset.
 
 ```sql
--- 10. Restaurants Offering the Most Diverse Menu
-
 SELECT r.name, COUNT(DISTINCT m.f_id) AS item_count
 FROM restaurant r
 JOIN menu m ON r.id = m.r_id
@@ -140,11 +118,9 @@ GROUP BY r.name
 ORDER BY item_count DESC
 LIMIT 10;
 ```
-This SQL query finds the top 10 restaurants offering the most diverse menus. It joins the `restaurant` table with the `menu` table using the restaurant ID `(r.id = m.r_id)`, then counts the number of **distinct food items** (`f_id`) each restaurant offers. The results are grouped by restaurant name, sorted in descending order by the number of unique menu items (`item_count`), and limited to the top 10—highlighting restaurants with the broadest variety of offerings.
+The second SQL query finds the top 10 restaurants offering the most diverse menus. It joins the `restaurant` table with the `menu` table using the restaurant ID `(r.id = m.r_id)`, then counts the number of **distinct food items** (`f_id`) each restaurant offers. The results are grouped by restaurant name, sorted in descending order by the number of unique menu items (`item_count`), and limited to the top 10—highlighting restaurants with the broadest variety of offerings.
 
 ```sql
--- 13. Peak Ordering Days
-
 SELECT 
   TRIM(TO_CHAR(order_date, 'Day')) AS weekday,
   EXTRACT(DOW FROM order_date) AS weekday_num,
@@ -154,11 +130,9 @@ FROM orders
 GROUP BY weekday, weekday_num
 ORDER BY weekday_num;
 ```
-This SQL query analyzes **peak ordering days** by summarizing order activity by weekday. It extracts the day of the week name using `TO_CHAR(order_date, 'Day')` (trimmed for clean formatting) and the numeric day of the week using `EXTRACT(DOW FROM order_date)` (0 = Sunday, 6 = Saturday). It then groups the data by both the weekday name and number, counting total orders and summing sales for each day. Finally, it orders the results by `weekday_num` to display the days in calendar order—helping identify which weekdays drive the most orders and revenue.
+The third SQL query analyzes **peak ordering days** by summarizing order activity by weekday. It extracts the day of the week name using `TO_CHAR(order_date, 'Day')` (trimmed for clean formatting) and the numeric day of the week using `EXTRACT(DOW FROM order_date)` (0 = Sunday, 6 = Saturday). It then groups the data by both the weekday name and number, counting total orders and summing sales for each day. Finally, it orders the results by `weekday_num` to display the days in calendar order—helping identify which weekdays drive the most orders and revenue.
 
 ```sql
--- 14. Income Group vs Order Frequency
-
 SELECT 
   u.Monthly_Income, 
   COUNT(o.*) AS order_count
