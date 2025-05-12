@@ -154,6 +154,8 @@ FROM orders
 GROUP BY weekday, weekday_num
 ORDER BY weekday_num;
 ```
+This SQL query analyzes **peak ordering days** by summarizing order activity by weekday. It extracts the day of the week name using `TO_CHAR(order_date, 'Day')` (trimmed for clean formatting) and the numeric day of the week using `EXTRACT(DOW FROM order_date)` (0 = Sunday, 6 = Saturday). It then groups the data by both the weekday name and number, counting total orders and summing sales for each day. Finally, it orders the results by `weekday_num` to display the days in calendar order—helping identify which weekdays drive the most orders and revenue.
+
 ```sql
 -- 14. Income Group vs Order Frequency
 
