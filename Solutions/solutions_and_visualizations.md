@@ -1,5 +1,6 @@
 # Q1: What are the top 10 restaurants by total sales amount?
 
+Identifying the top 10 restaurants by total sales amount is vital for business analytics as it highlights the highest revenue-generating outlets, offering insights into what drives their success—be it location, pricing, menu offerings, or customer satisfaction. This information enables businesses to replicate winning strategies across other branches, allocate resources more effectively, prioritize marketing and investment efforts, and refine operational decisions such as staffing and inventory management. Understanding these top performers serves as a benchmark for evaluating other restaurants and guiding strategic growth initiatives.
 ## Solution
 ```SQL
 SELECT r.name, SUM(o.sales_amount) AS total_sales
