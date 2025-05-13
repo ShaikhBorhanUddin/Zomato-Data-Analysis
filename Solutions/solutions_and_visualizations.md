@@ -167,7 +167,7 @@ This SQL query retrieves the top 5 cuisines with the highest number of orders fr
 ## Visualization
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_4.png?raw=true)
 
-# Q5:What is the distribution of vegetarian vs non-vegetarian items ordered?
+# Q5: What is the distribution of vegetarian vs non-vegetarian items ordered?
 
 ## Solution
 ```SQL
