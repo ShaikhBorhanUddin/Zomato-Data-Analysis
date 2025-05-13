@@ -374,14 +374,56 @@ This SQL query identifies the top 10 restaurants with the most diverse menus bas
 
 # Q11: What are the most ordered food items across all restaurants?
 
+This question is significant because identifying the most ordered food items across all restaurants provides critical insights into customer preferences and popular trends. From a business intelligence perspective, this information can be used to optimize menu offerings, streamline inventory management, and improve demand forecasting. It helps businesses focus on high-performing dishes, ensure consistent availability, and replicate successful items across different locations. Additionally, knowing which items are most popular can inform targeted marketing campaigns, seasonal promotions, and strategic pricing decisions. Ultimately, this analysis supports better operational efficiency, customer satisfaction, and revenue growth by aligning offerings with actual demand.
+
 ## Solution
 ```SQL
-
+SELECT f.item, SUM(o.sales_qty) AS total_quantity
+FROM orders o
+JOIN menu m ON o.r_id = m.r_id
+JOIN food f ON m.f_id = f.f_id
+GROUP BY f.item
+ORDER BY total_quantity DESC
+LIMIT 30;
 ```
+This SQL query identifies the 30 most ordered food items across all restaurants by calculating the total quantity sold for each item. It joins the `orders` table (`o`) with the `menu` table (`m`) using the restaurant ID (`r_id`), and then joins the menu table with the `food` table (`f`) using the food ID (`f_id`) to access the actual item names. The query groups the results by `f.item`, which represents the name of each food item, and uses the `SUM(o.sales_qty)` function to calculate the total quantity of each item sold across all orders. The results are then ordered in descending order of `total_quantity` so that the most frequently ordered items appear first. The `LIMIT 30` clause restricts the output to the top 30 food items, providing insight into customer preferences and bestsellers.
+
 ## Output
+|item                 |total_quantity|
+|---------------------|--------------|
+|Jeera Rice           |84334         |
+|Veg Fried Rice       |70162         |
+|Paneer Butter Masala |66664         |
+|French Fries         |58428         |
+|Dal Fry              |53932         |
+|Cold Coffee          |52502         |
+|Veg Biryani          |48436         |
+|Butter Naan          |48336         |
+|Chicken Fried Rice   |46440         |
+|Garlic Naan          |36328         |
+|Veg Pulao            |35614         |
+|Butter Roti          |34870         |
+|Dal Makhani          |34724         |
+|Green Salad          |33610         |
+|Plain Rice           |33196         |
+|Egg Fried Rice       |33082         |
+|Paneer Tikka         |30896         |
+|Shahi Paneer         |30830         |
+|Chana Masala         |29844         |
+|Aloo Paratha         |29822         |
+|Veg Burger           |28048         |
+|Plain Naan           |27638         |
+|Tandoori Roti        |27176         |
+|Veg Sandwich         |26736         |
+|Paneer Lababdar      |25872         |
+|Egg Biryani          |25588         |
+|Dal Tadka            |25538         |
+|Mushroom Masala      |25386         |
+|Kadai Paneer         |24680         |
+|Veg Manchow Soup     |24560         |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_11.png?raw=true)
 
 # Q12: How does spending behavior differ between genders?
 
