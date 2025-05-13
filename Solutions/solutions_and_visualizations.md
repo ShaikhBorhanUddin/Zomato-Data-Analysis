@@ -480,12 +480,29 @@ This SQL query analyzes restaurant order activity by day of the week to identify
 
 # Q14: How does order frequency vary across different income groups?
 
+This question is significant because understanding how order frequency varies across different income groups provides valuable insights into consumer behavior and purchasing power. From a business intelligence perspective, it helps identify which income segments are more engaged and likely to generate repeat business. This enables companies to tailor promotions, loyalty programs, and product recommendations more effectively. For example, higher-income groups might place fewer but larger orders, while middle-income users may order more frequently. Such patterns support more personalized marketing strategies, better revenue forecasting, and smarter allocation of resources. Ultimately, it helps align business strategies with the spending habits and needs of various customer segments.
+
 ## Solution
 ```SQL
-
+SELECT 
+  u.Monthly_Income, 
+  COUNT(o.*) AS order_count
+FROM users u
+JOIN orders o ON u.user_id = o.user_id
+GROUP BY u.Monthly_Income
+ORDER BY order_count DESC;
 ```
+This SQL query examines how users' monthly income levels relate to their ordering frequency. It joins the `users` table (`u`) with the `orders` table (`o`) using the `user_id` to link each order to its corresponding user. The query then groups the results by `Monthly_Income` from the `users` table and counts the number of orders placed by users within each income bracket using `COUNT(o.*) AS order_count`. Finally, the results are sorted in descending order of `order_count`, showing which income levels are associated with the highest ordering activity. This analysis helps businesses understand which income segments are the most active customers, enabling targeted marketing, pricing strategies, and product positioning.
+
 ## Output
+|monthly_income |order_count|
+|---------------|-----------|
+|No Income      |72416      |
+|25001 to 50000 |26691      |
+|More than 50000|24184      |
+|10001 to 25000 |17295      |
+|Below Rs.10000 |9695       |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_14.png?raw=true)
 
