@@ -10,6 +10,8 @@ GROUP BY r.name
 ORDER BY total_sales DESC
 LIMIT 10;
 ```
+This SQL query retrieves the top 10 restaurants by total sales amount. It joins the orders table (o) with the restaurant table (r) using the common key r_id (restaurant ID). For each restaurant (r.name), it calculates the total sales amount by summing the sales_amount from the orders table. The results are grouped by restaurant name to aggregate sales per restaurant, sorted in descending order of total_sales, and the top 10 records are returned. This helps identify which restaurants have generated the highest revenue.
+
 ## Output
 |name                            |total_sales|
 |--------------------------------|-----------|
