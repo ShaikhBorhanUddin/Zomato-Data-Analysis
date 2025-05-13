@@ -146,9 +146,23 @@ Identifying the top 5 most popular cuisines by order volume is vital for underst
 
 ## Solution
 ```SQL
-
+SELECT m.cuisine, COUNT(o.*) AS order_count
+FROM orders o
+JOIN menu m ON o.r_id = m.r_id
+GROUP BY m.cuisine
+ORDER BY order_count DESC
+LIMIT 5;
 ```
+This SQL query retrieves the top 5 cuisines with the highest number of orders from the database. It joins the "orders" table (aliased as "o") with the "menu" table (aliased as "m") using the "r_id" field, which is common to both tables. The query then counts the number of orders for each cuisine, grouping the results by the "cuisine" field from the "menu" table. The results are ordered in descending order based on the count of orders, ensuring that the cuisines with the most orders appear first. Finally, the "LIMIT 5" clause restricts the output to only the top 5 cuisines.
+
 ## Output
+|cuisine               |order_count|
+|----------------------|-----------|
+|North Indian,Chinese  |83443      |
+|Indian,Chinese        |63225      |
+|North Indian          |45671      |
+|Indian                |43938      |
+|Chinese,North Indian  |26935      |
 
 ## Visualization
 ![Dashboard](?raw=true)
