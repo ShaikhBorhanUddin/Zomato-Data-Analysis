@@ -305,14 +305,39 @@ This SQL query identifies the top 1% of highest-spending users and then selects 
 
 # Q9: What are the top 15 cuisines with the highest average menu prices?
 
+This question is significant in business analytics because it helps identify the most premium or high-priced cuisines offered across the platform or business. By analyzing the average menu prices for different cuisines, businesses can gain insights into pricing trends, customer willingness to pay, and the perceived value of various cuisine types. This information is crucial for strategic pricing decisions, menu optimization, and profit margin analysis. Additionally, understanding which cuisines command higher prices can inform marketing efforts, such as promoting high-margin items or expanding high-performing cuisine categories. It also aids in competitive positioning by revealing how the business’s offerings compare to market expectations in different culinary segments.
+
 ## Solution
 ```SQL
-
+SELECT cuisine, AVG(price) AS avg_price
+FROM menu
+GROUP BY cuisine
+ORDER BY avg_price DESC
+LIMIT 15;
 ```
+This SQL query retrieves the top 15 cuisines with the highest average menu prices. It selects the `cuisine` column from the `menu` table and uses the `AVG(price)` function to calculate the average price of menu items for each cuisine. The `GROUP BY cuisine` clause ensures that the average is computed separately for each unique cuisine type. The results are then sorted in descending order using `ORDER BY avg_price DESC` so that cuisines with the highest average prices appear at the top. Finally, the `LIMIT 15` clause restricts the output to only the top 15 highest-priced cuisines, giving insight into the most premium offerings.
+
 ## Output
+|cuisine                                                             |avg_price         |
+|--------------------------------------------------------------------|------------------|
+|Street Food, Indian, Seafood                                        |1800              |
+|North Indian, Italian, Asian, Chinese, Thai, Continental            |1500              |
+|Continental, Indian                                                 |1200              |
+|Indian, Continental, Salads, Snacks                                 |1200              |
+|Healthy Food,Snacks                                                 |1177.241592920354 |
+|Fast Food, Italian, Snacks, Lebanese                                |1000              |
+|Healthy Food, Snacks, Desserts                                      |1000              |
+|North Indian, Asian, Continental                                    |1000              |
+|North Indian, Italian, Chinese                                      |1000              |
+|Indian, Italian, Continental, American, Lebanese, Chinese, Mexican  |900               |
+|Asian,Desserts                                                      |871.8625          |
+|American, Continental, Desserts, Beverages                          |850               |
+|Indian, Beverages, Pizzas                                           |800               |
+|Indian, Chinese, Fast Food, Seafood                                 |800               |
+|Indian, Tandoor, Biryani, Desserts                                  |800               |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_9.png?raw=true)
 
 # Q10: Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
 
