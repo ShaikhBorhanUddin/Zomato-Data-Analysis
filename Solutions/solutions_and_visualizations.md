@@ -169,6 +169,8 @@ This SQL query retrieves the top 5 cuisines with the highest number of orders fr
 
 # Q5: What is the distribution of vegetarian vs non-vegetarian items ordered?
 
+This query is essential in the context of business intelligence because it provides valuable insight into customer dietary preferences by analyzing the demand for vegetarian versus non-vegetarian items. Understanding this distribution helps restaurant managers and business stakeholders make data-driven decisions regarding menu planning, inventory management, and marketing strategies. For instance, if vegetarian items are significantly more popular, the business might expand its vegetarian offerings or create promotions targeting health-conscious or vegetarian customers. Conversely, if non-vegetarian items dominate, the restaurant may focus on sourcing quality meat products or introducing premium non-veg dishes. Ultimately, this insight enables the business to align its offerings with customer behavior, optimize costs, and enhance customer satisfaction.
+
 ## Solution
 ```SQL
 
