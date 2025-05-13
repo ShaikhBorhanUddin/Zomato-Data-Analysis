@@ -193,36 +193,115 @@ This SQL query determines the number of vegetarian and non-vegetarian food items
 
 # Q6: What are the top 20 cities by the number of restaurants?
 
+Identifying the top 20 cities by the number of restaurants is important because it highlights key geographic markets where the business has a strong presence or faces significant competition. From a business intelligence standpoint, this information aids in strategic decision-making, such as market expansion, resource allocation, targeted marketing campaigns, and competitive analysis. Cities with a high concentration of restaurants may represent thriving food markets with strong customer demand, while areas with fewer restaurants could indicate potential opportunities for growth. Additionally, understanding regional distribution allows the company to tailor its offerings and operations based on local preferences and market dynamics.
+
 ## Solution
 ```SQL
-
+SELECT city, COUNT(*) AS restaurant_count
+FROM restaurant
+GROUP BY city
+ORDER BY restaurant_count DESC
+LIMIT 20;
 ```
+This SQL query retrieves the top 20 cities with the highest number of restaurants. It selects the `city` column from the `restaurant` table and uses the `COUNT(*)` function to calculate how many restaurants are located in each city. The results are grouped by city using the `GROUP BY` clause, which ensures that the count is calculated for each unique city. The `ORDER BY restaurant_count DESC` clause sorts the cities in descending order based on the number of restaurants, so the cities with the most restaurants appear first. Finally, the `LIMIT 20` clause restricts the output to only the top 20 cities. This provides a clear view of where restaurant presence is strongest.
+
 ## Output
+|city                      |restaurant_count|
+|--------------------------|----------------|
+|Bikaner                   |1666            |
+|Noida-1                   |1428            |
+|Indirapuram,Delhi         |1279            |
+|BTM,Bangalore             |1161            |
+|Rohini,Delhi              |1136            |
+|Kothrud,Pune              |1089            |
+|Indiranagar,Bangalore     |1080            |
+|Electronic City,Bangalore |1039            |
+|Greater Kailash 2,Delhi   |1038            |
+|Vashi,Mumbai              |1022            |
+|Kukatpally,Hyderabad      |1009            |
+|Viman Nagar,Pune          |1001            |
+|sohna road,Gurgaon        |976             |
+|Koramangala,Bangalore     |954             |
+|Laxmi Nagar,Delhi         |933             |
+|Gomti Nagar,Lucknow       |921             |
+|Malviya Nagar,Delhi       |901             |
+|HSR,Bangalore             |898             |
+|Madhapur,Hyderabad        |893             |
+|Wakad,Pune                |869             |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_6.png?raw=true)
 
 # Q7: How do different user demographics correlate with average order value?
 
+This question is significant because understanding how different user demographics correlate with average order value allows businesses to segment their customer base more effectively and tailor marketing strategies, promotions, and product offerings accordingly. By analyzing variables such as age, gender, location, or income bracket in relation to spending behavior, companies can identify high-value customer segments, predict purchasing patterns, and personalize user experiences to boost sales and retention. For example, if younger users tend to place smaller but more frequent orders, while older users place fewer but higher-value orders, marketing efforts can be adjusted to match each group’s behavior. This insight drives data-informed decision-making, enhances customer targeting, and ultimately contributes to revenue growth and operational efficiency.
+
 ## Solution
 ```SQL
+SELECT u.Occupation, AVG(o.sales_amount) AS avg_order_value
+FROM orders o
+JOIN users u ON o.user_id = u.user_id
+GROUP BY u.Occupation
+ORDER BY avg_order_value DESC;
 
 ```
+This SQL query analyzes how users' occupations correlate with their average order value. It joins the `orders` table (`o`) with the `users` table (`u`) using the common `user_id` field to associate each order with the user who placed it. Then, it groups the data by the `Occupation` field from the `users` table, calculating the average of the `sales_amount` for each occupation using the `AVG()` function. This average represents the typical amount spent per order by users within each occupation category. Finally, the results are sorted in descending order based on the average order value (`avg_order_value`), so occupations with the highest spending appear first. This query helps identify which professional groups are the most valuable in terms of purchasing behavior.
+
 ## Output
 
+|occupation     |avg_order_value     |
+|---------------|--------------------|
+|Student        |6594.309013894443   |
+|Employee       |6549.1858814795405  |
+|Self Employeed |6500.368112488084   |
+|House wife     |6497.569576490925   |
+
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_7.png?raw=true)
 
 # Q8: Who are the top 15 highest-spending users?
 
+This question is significant in the context of business analytics because identifying the top 15 highest-spending users allows a business to recognize its most valuable customers—often referred to as high-value or VIP customers. Understanding who these users are enables companies to implement targeted loyalty programs, offer personalized incentives, and prioritize customer service efforts to retain and nurture these relationships. It also helps in customer segmentation, revenue forecasting, and strategic planning by highlighting patterns in high-value user behavior. Ultimately, focusing on top spenders can lead to increased customer lifetime value and a stronger return on investment in customer acquisition and retention strategies.
+
 ## Solution
 ```SQL
-
+WITH user_spending AS (
+    SELECT user_id, SUM(sales_amount) AS total_spent
+    FROM orders
+    GROUP BY user_id
+),
+percentile_value AS (
+    SELECT PERCENTILE_CONT(0.99) WITHIN GROUP (ORDER BY total_spent) AS threshold
+    FROM user_spending
+)
+SELECT us.user_id, us.total_spent
+FROM user_spending us, percentile_value p
+WHERE us.total_spent > p.threshold
+LIMIT 15;
 ```
+This SQL query identifies the top 1% of highest-spending users and then selects the top 15 among them based on total spending. It begins by creating a Common Table Expression (CTE) named `user_spending`, which calculates the total amount each user has spent by summing the `sales_amount` from the `orders` table and grouping the data by `user_id`. The second CTE, `percentile_value`, calculates the 99th percentile of user spending using the `PERCENTILE_CONT(0.99)` function, which determines the spending threshold that separates the top 1% of users from the rest. In the final query, it selects users from the `user_spending` CTE whose `total_spent` exceeds this threshold, meaning they belong to the top 1% of spenders. The `LIMIT 15` clause then restricts the output to the top 15 users from this elite group. This approach helps pinpoint the most valuable customers based on spending behavior.
+
 ## Output
+|user_id|total_spent|
+|-------|-----------|
+|56903  |176273     |
+|91069  |186639     |
+|1159   |1320653    |
+|99632  |200223     |
+|96114  |678852     |
+|41368  |305625     |
+|76859  |183648     |
+|64491  |222056     |
+|98412  |323005     |
+|46037  |172097     |
+|41482  |207324     |
+|36     |602898     |
+|38853  |194342     |
+|71495  |601213     |
+|17429  |294042     |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_8.png?raw=true)
 
 # Q9: What are the top 15 cuisines with the highest average menu prices?
 
