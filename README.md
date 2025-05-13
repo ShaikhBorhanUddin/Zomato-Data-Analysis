@@ -71,6 +71,8 @@ The following steps outline the end-to-end workflow for this project:
 - **Result Visualization with Tableau** : The query results are connected to Tableau for interactive dashboards and visualizations to effectively communicate key business insights.
 
 ## ❓ Analytic Questions
+
+The following questions are addressed in this project. For details explanation of every queston with relevant sql queries and visualizations please see [Solutions and Visualizations].
 1. What are the top 10 restaurants by total sales amount?
 2. What is the average rating and total rating count for restaurants in the top 20 cities?
 3. What are the monthly order trends based on order volume over time?
