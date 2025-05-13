@@ -53,6 +53,8 @@ GROUP BY city
 ORDER BY avg_rating DESC
 LIMIT 20;
 ```
+This SQL query retrieves the top 20 cities based on average restaurant ratings. It works by grouping data from the restaurant table by city, calculating the average rating per city while excluding any null ratings. Since the rating_count column contains qualitative labels (e.g., "Too Few Ratings", "20+ ratings"), the query estimates a numeric value for each label using a CASE statement—assigning approximate values like 10, 25, 55, and 110 to represent the respective ranges. The average of these estimated values is then computed as avg_rating_count_est for each city. Finally, the cities are ordered by descending avg_rating, and only the top 20 cities are returned. This query helps compare cities not just by average rating but also by estimated customer engagement levels.
+
 ## Output
 |city                            |avg_rating          |avg_rating_count_est  |
 |--------------------------------|--------------------|----------------------|
