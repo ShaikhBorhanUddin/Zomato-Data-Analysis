@@ -449,14 +449,34 @@ This SQL query analyzes the difference in average spending behavior between gend
 
 # Q13: On which days of the week do restaurants experience peak order volumes?
 
+This question is significant in business intelligence because identifying the days of the week with peak order volumes helps restaurants optimize staffing, inventory, and marketing efforts. By understanding when demand is highest, businesses can ensure adequate workforce coverage, prepare sufficient ingredients, and run targeted promotions to capitalize on high-traffic periods. It also aids in operational efficiency and cost control by avoiding over- or under-resourcing on specific days. Additionally, this insight supports decision-making around menu planning, special offers, and customer engagement strategies tailored to peak times, ultimately enhancing customer satisfaction and profitability.
+
 ## Solution
 ```SQL
-
+SELECT 
+  TRIM(TO_CHAR(order_date, 'Day')) AS weekday,
+  EXTRACT(DOW FROM order_date) AS weekday_num,
+  COUNT(*) AS total_orders,
+  SUM(sales_amount) AS total_sales
+FROM orders
+GROUP BY weekday, weekday_num
+ORDER BY weekday_num;
 ```
+This SQL query analyzes restaurant order activity by day of the week to identify peak ordering trends. It selects data from the `orders` table and extracts two key pieces of information from the `order_date`: the name of the weekday using `TO_CHAR(order_date, 'Day')` (trimmed of extra spaces) and the numeric day of the week using EXTRACT(DOW FROM order_date) (where Sunday = 0 and Saturday = 6). It then counts the total number of orders `(COUNT(*))` and calculates the total sales `(SUM(sales_amount))` for each day. The data is grouped by both the weekday name and number to ensure accurate aggregation and ordering. Finally, the results are sorted by `weekday_num` so that the days appear in calendar order from Sunday to Saturday, making it easy to spot trends and identify peak order days.
+
 ## Output
+|weekday  |weekday_num|total_orders|total_sales|
+|---------|-----------|------------|-----------|
+|Sunday   |0          |130         |321352     |
+|Monday   |1          |26345       |166266667  |
+|Tuesday  |2          |29486       |177843388  |
+|Wednesday|3          |29021       |188015665  |
+|Thursday |4          |29598       |188636824  |
+|Friday   |5          |35293       |264163551  |
+|Saturday |6          |408         |1378694    |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_13.png?raw=true)
 
 # Q14: How does order frequency vary across different income groups?
 
