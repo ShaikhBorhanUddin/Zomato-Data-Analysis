@@ -341,14 +341,36 @@ This SQL query retrieves the top 15 cuisines with the highest average menu price
 
 # Q10: Which restaurants offer the most diverse menu, based on the number of unique cuisines and dishes available?
 
+This question is significant in the context of business intelligence because it helps identify restaurants with the most diverse offerings, which can be a key competitive advantage in attracting a wider customer base. Restaurants with a broad variety of unique cuisines and dishes may appeal to more diverse tastes, increase customer retention, and drive higher order volumes. From an operational standpoint, understanding menu diversity can aid in supply chain planning, kitchen resource allocation, and staff training. Additionally, businesses can use this insight to benchmark menu diversity across locations, discover best-performing restaurants, or develop strategies for introducing more variety in underperforming outlets. Overall, analyzing menu diversity supports informed decisions around customer experience, menu development, and market positioning.
+
 ## Solution
 ```SQL
-
+SELECT r.name, COUNT(DISTINCT m.f_id) AS item_count
+FROM restaurant r
+JOIN menu m ON r.id = m.r_id
+GROUP BY r.name
+ORDER BY item_count DESC
+LIMIT 10;
 ```
+This SQL query identifies the top 10 restaurants with the most diverse menus based on the number of unique food items they offer. It joins the `restaurant` table (`r`) with the `menu` table (`m`) using the restaurant ID (`r.id = m.r_id`). The query then counts the number of distinct food item IDs (`f_id`) from the `menu` table for each restaurant, which represents the variety of dishes available. The `GROUP BY r.name` clause ensures that the count is calculated separately for each restaurant. The results are ordered in descending order by `item_count` so that restaurants with the most menu variety appear first. The `LIMIT 10` clause restricts the output to the top 10 most diverse restaurants.
+
 ## Output
+|name                      |item_count|
+|--------------------------|----------|
+|Honest                    |1288      |
+|The Chocolate Room        |1060      |
+|Thalassery Restaurant     |1057      |
+|Food Fusion               |976       |
+|Shivam Snacks             |858       |
+|Laziz Pizza               |848       |
+|Vipul Dudhiya Sweets      |805       |
+|Parosa                    |758       |
+|Gwalia Sweets & Fast Food |733       |
+|Moti Mahal Delux          |731       |
+
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_10.png?raw=true)
 
 # Q11: What are the most ordered food items across all restaurants?
 
