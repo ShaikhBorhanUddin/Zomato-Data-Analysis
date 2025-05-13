@@ -72,7 +72,8 @@ The following steps outline the end-to-end workflow for this project:
 
 ## ❓ Analytic Questions
 
-The following questions are addressed in this project. For details explanation of every queston with relevant sql queries and visualizations please see [Solutions and Visualizations](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Solutions/solutions_and_visualizations.md).
+This project aims to address several critical questions within the context of restaurant analytics. For an in-depth exploration of each question, complete with relevant SQL queries and visualizations, please refer to [Solutions and Visualizations](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Solutions/solutions_and_visualizations.md).
+
 1. What are the top 10 restaurants by total sales amount?
 2. What is the average rating and total rating count for restaurants in the top 20 cities?
 3. What are the monthly order trends based on order volume over time?
@@ -88,7 +89,7 @@ The following questions are addressed in this project. For details explanation o
 13. On which days of the week do restaurants experience peak order volumes?
 14. How does order frequency vary across different income groups?
 
-Solving these 14 analytic questions is essential for business intelligence and analytics as they provide valuable insights into various aspects of restaurant operations, customer behavior, and market trends. By analyzing top performers, customer satisfaction, order trends, menu preferences, and demographic influences, businesses can optimize pricing strategies, marketing campaigns, and operational efficiency. Understanding factors such as peak order times, menu diversity, and the relationship between income and order frequency helps companies make data-driven decisions, tailor offerings to customer segments, improve inventory management, and identify growth opportunities. Ultimately, these insights enable businesses to enhance customer experience, increase profitability, and maintain a competitive edge in a dynamic market.
+Addressing these 14 questions is crucial for effective business intelligence and analytics, as they yield valuable insights into various elements of restaurant operations, customer preferences, and market dynamics. By thoroughly examining top performers, customer satisfaction metrics, order patterns, menu trends, and demographic influences, businesses can refine their pricing approaches, enhance marketing strategies, and improve operational efficiency. Gaining an understanding of factors like peak ordering times, menu diversity, and the interplay between income levels and order frequency empowers companies to make informed, data-driven decisions. This, in turn, helps tailor services to customer segments, optimize inventory management, and spot potential growth avenues. Ultimately, these insights equip businesses to elevate the customer experience, boost profitability, and sustain a competitive advantage in an ever-evolving market.
 
 ## 🔍 Sample SQL Queries
 
