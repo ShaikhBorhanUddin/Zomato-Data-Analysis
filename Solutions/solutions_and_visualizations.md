@@ -79,7 +79,15 @@ LIMIT 20;
 
 ## Solution
 ```SQL
-
+SELECT month, total_orders
+FROM (
+    SELECT 
+        TO_CHAR(DATE_TRUNC('month', order_date), 'YYYY-MON') AS month,
+        COUNT(*) AS total_orders
+    FROM orders
+    GROUP BY DATE_TRUNC('month', order_date)
+) AS sub
+ORDER BY TO_DATE(month, 'YYYY-MON');
 ```
 ## Output
 
