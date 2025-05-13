@@ -138,9 +138,11 @@ This SQL query calculates the monthly order trends by counting the total number 
 |2020-JUN|2747        |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_3.png?raw=true)
 
 # Q4: What are the top 5 most popular cuisines by order volume?
+
+Identifying the top 5 most popular cuisines by order volume is vital for understanding customer food preferences and market demand. This insight helps restaurants and food delivery platforms tailor their offerings by prioritizing high-demand cuisines, which can boost customer satisfaction and revenue. It also supports menu optimization, strategic partnerships with specific cuisine-focused vendors, and the design of targeted marketing campaigns. Furthermore, understanding cuisine popularity trends over time can inform expansion decisions, such as opening new branches or launching virtual brands that specialize in trending food categories.
 
 ## Solution
 ```SQL
