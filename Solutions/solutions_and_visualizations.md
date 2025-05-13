@@ -101,6 +101,41 @@ ORDER BY TO_DATE(month, 'YYYY-MON');
 This SQL query calculates the monthly order trends by counting the total number of orders placed in each month. It first truncates the order_date to the first day of each month and formats it as 'YYYY-MON' to create a readable label for each month. Then, it groups the data by these month labels and counts the number of orders in each group. Finally, it orders the results chronologically by converting the formatted month strings back into date objects using TO_DATE. This allows businesses to observe how order volumes change over time, identify seasonal patterns, and make informed decisions related to marketing, inventory, and staffing based on fluctuations in customer demand.
 
 ## Output
+|month   |total_orders|
+|--------|------------|
+|2017-OCT|4293        |
+|2017-NOV|5500        |
+|2017-DEC|4975        |
+|2018-JAN|5320        |
+|2018-FEB|5024        |
+|2018-MAR|5238        |
+|2018-APR|5120        |
+|2018-MAY|5279        |
+|2018-JUN|5534        |
+|2018-JUL|5405        |
+|2018-AUG|5379        |
+|2018-SEP|4873        |
+|2018-OCT|5171        |
+|2018-NOV|4905        |
+|2018-DEC|4293        |
+|2019-JAN|4691        |
+|2019-FEB|4630        |
+|2019-MAR|4664        |
+|2019-APR|4447        |
+|2019-MAY|4740        |
+|2019-JUN|4385        |
+|2019-JUL|4958        |
+|2019-AUG|4091        |
+|2019-SEP|4142        |
+|2019-OCT|4299        |
+|2019-NOV|3944        |
+|2019-DEC|3431        |
+|2020-JAN|4003        |
+|2020-FEB|4031        |
+|2020-MAR|3583        |
+|2020-APR|3621        |
+|2020-MAY|3565        |
+|2020-JUN|2747        |
 
 ## Visualization
 ![Dashboard](?raw=true)
