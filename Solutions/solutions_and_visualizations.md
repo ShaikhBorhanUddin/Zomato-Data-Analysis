@@ -173,12 +173,23 @@ This query is essential in the context of business intelligence because it provi
 
 ## Solution
 ```SQL
-
+SELECT f.veg_or_non_veg, COUNT(*) AS item_count
+FROM orders o
+JOIN menu m ON o.r_id = m.r_id AND o.sales_qty > 0
+JOIN food f ON m.f_id = f.f_id
+GROUP BY f.veg_or_non_veg
+LIMIT 2;
 ```
+This SQL query determines the number of vegetarian and non-vegetarian food items that have been ordered, focusing only on those with a positive sales quantity. It joins the `orders` table (`o`) with the `menu` table (`m`) using the `r_id` field and includes a condition to filter out items that were not sold (`o.sales_qty > 0`). Then it joins the `menu` table with the `food` table (`f`) based on the food ID (`f_id`) to access the `veg_or_non_veg` attribute, which classifies each item as vegetarian or non-vegetarian. The query groups the results by this classification and counts the number of items ordered in each category. Finally, it limits the output to two rows, corresponding to the two possible values: vegetarian and non-vegetarian. This allows businesses to understand dietary trends among their customers.
+
 ## Output
+|veg_or_non_veg|item_count|
+|--------------|----------|
+|Non-veg       |372966    |
+|Veg           |821170    |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_5.png?raw=true)
 
 # Q6: What are the top 20 cities by the number of restaurants?
 
