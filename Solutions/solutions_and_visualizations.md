@@ -427,14 +427,25 @@ This SQL query identifies the 30 most ordered food items across all restaurants 
 
 # Q12: How does spending behavior differ between genders?
 
+This question is important because understanding how spending behavior differs between genders enables businesses to tailor their marketing strategies, product offerings, and customer engagement efforts more effectively. By analyzing gender-based spending patterns, companies can identify which products or services resonate more with each group, optimize promotional campaigns, and personalize user experiences to drive higher conversions. For example, if one gender tends to make higher-value purchases or orders more frequently, targeted loyalty programs or discounts can be designed to encourage continued engagement. Overall, this analysis helps improve customer satisfaction, increase revenue, and support more inclusive, data-driven business decisions.
+
 ## Solution
 ```SQL
-
+SELECT u.Gender, AVG(o.sales_amount) AS avg_spending
+FROM orders o
+JOIN users u ON o.user_id = u.user_id
+GROUP BY u.Gender;
 ```
+This SQL query analyzes the difference in average spending behavior between genders. It joins the `orders` table (`o`) with the `users` table (`u`) using the `user_id` to associate each order with the corresponding user. The query then groups the data by `Gender`, so the results are separated for each gender category. Using the `AVG(o.sales_amount)` function, it calculates the average sales amount (or spending) for each gender group. The result shows how much, on average, users of each gender spend per order, providing insight into gender-based spending trends.
+
 ## Output
+|gender |avg_spending        |
+|-------|--------------------|
+|Female |6639.2664947011845  |
+|Male   |6509.744143284416   |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_12.png?raw=true)
 
 # Q13: On which days of the week do restaurants experience peak order volumes?
 
