@@ -31,6 +31,8 @@ This SQL query retrieves the top 10 restaurants by total sales amount. It joins 
 
 # Q2: What is the average rating and total rating count for restaurants in the top 20 cities?
 
+Analyzing the average rating and rating count by city is important for business analytics because it helps identify regional performance trends and customer satisfaction levels across different locations. Cities with high average ratings and large rating counts likely reflect strong customer loyalty, positive dining experiences, and brand trust—making them valuable benchmarks for other branches. Conversely, cities with low ratings or low engagement signal areas needing improvement in service quality, food, or ambiance. This insight guides targeted interventions, resource allocation, marketing strategies, and strategic decisions such as expanding in high-performing regions or improving operations in underperforming ones.
+
 ## Solution
 ```SQL
 SELECT 
