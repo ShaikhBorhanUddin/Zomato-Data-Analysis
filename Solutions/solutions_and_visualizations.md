@@ -80,9 +80,11 @@ This SQL query retrieves the top 20 cities based on average restaurant ratings. 
 |Nungambakkam,Chennai            |4.189534883720927   |66.8531468531468531   |
 
 ## Visualization
-![Dashboard](?raw=true)
+![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/Viz_2.png?raw=true)
 
 # Q3: What are the monthly order trends based on order volume over time?
+
+Understanding monthly order trends based on order volume over time is crucial for gaining insights into customer demand patterns and seasonality. By analyzing how the number of orders fluctuates month by month, businesses can identify high-performing periods that may align with holidays, promotions, or weather conditions, and also pinpoint low-demand months that may require marketing boosts or cost-saving strategies. This knowledge enables more accurate sales forecasting, optimized inventory management, and strategic planning for staffing, promotions, and resource allocation—all aimed at maximizing operational efficiency and customer satisfaction.
 
 ## Solution
 ```SQL
@@ -96,6 +98,8 @@ FROM (
 ) AS sub
 ORDER BY TO_DATE(month, 'YYYY-MON');
 ```
+This SQL query calculates the monthly order trends by counting the total number of orders placed in each month. It first truncates the order_date to the first day of each month and formats it as 'YYYY-MON' to create a readable label for each month. Then, it groups the data by these month labels and counts the number of orders in each group. Finally, it orders the results chronologically by converting the formatted month strings back into date objects using TO_DATE. This allows businesses to observe how order volumes change over time, identify seasonal patterns, and make informed decisions related to marketing, inventory, and staffing based on fluctuations in customer demand.
+
 ## Output
 
 ## Visualization
