@@ -209,14 +209,10 @@ In this Zomato Data Analysis project, multiple tools and technologies were integ
 
 ## 🧠 Practical Applications
 
-- **Restaurant Business Strategy**: Helps restaurant owners and managers make informed decisions on pricing, menu offerings, and location strategies by understanding customer preferences, spending patterns, and city-wise performance.
-
-- **Customer Segmentation & Targeting**: Enables marketing teams to segment users based on demographics, order behavior, and spending, allowing for more targeted and effective promotional campaigns.
-
-- **Operational Optimization**: Supports improvements in supply chain and logistics planning by analyzing order trends, peak times, and cuisine popularity, which can lead to better inventory control and service delivery.
-
-## 🛠️ How to use this repository
-
+- **Restaurant Business Strategy**: This project provides valuable insights into which cities and restaurants are generating the most revenue, which cuisines are most ordered, and how user ratings affect restaurant visibility. Such analytics help business stakeholders make data-driven decisions related to opening new outlets, optimizing pricing strategies, and enhancing service offerings to stay competitive in the market.
+- **Customer Segmentation & Targeted Marketing**: By analyzing user demographics such as age, gender, income, and order behavior, the data enables precise segmentation of customer groups. This allows marketing teams to create customized campaigns, loyalty programs, or seasonal promotions aimed at specific user profiles, ultimately improving customer retention and satisfaction.
+- **Operational Optimization**: Understanding order trends by day, month, and cuisine type helps restaurants streamline operations, predict demand, and manage inventory more efficiently. Additionally, insights on vegetarian vs. non-vegetarian preferences and high-selling menu items aid in optimizing the menu for profitability and customer preference.
+ 
 ## 📄 Licence
 
 This project is licensed under the MIT License. You are free to use, modify, and distribute this project for personal or commercial purposes, provided that proper credit is given to the original author. See the Licence file for full details.
