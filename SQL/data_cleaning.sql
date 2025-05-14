@@ -1,13 +1,15 @@
--- 1. fixing currency issues
--- Finding entries with USD
+-- 1. In `orders` table some input under `currency` column is in USD. It has to be converted to INR.
+
 SELECT * FROM orders
 WHERE currency = 'USD';
--- fixing currency issues
--- 1 USD = 82.5 INR (approximately on entry day)
+
+-- Also, 'sales_amount` corresponding to those 'currency' has to be converted accordingly. Here, 1 USD = 82.5 INR (approximately on entry day) is used.
+
 UPDATE orders
 SET currency = 'INR',
     sales_amount = sales_amount * 82.5
 WHERE currency = 'USD';
+
 ------------------------------------------------
 -- 2. Clean the rating Column (Replace '--' and Blank With NULL)
 UPDATE restaurant
