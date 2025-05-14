@@ -61,7 +61,7 @@ The Zomato dataset contained several inconsistencies that needed to be addressed
 
 ### 🧱 ER Diagram
 
-The primary key for the restaurant table is `id`, which is in INT format. Both the menu and orders tables use this as a foreign key, referred to as `r_id`. However, in the menu table, `r_id` is formatted as VARCHAR, while in the orders table, it is formatted as FLOAT. To avoid errors during data uploading, the restaurant ID should be in INT format across all three tables. Additionally, there are several instances of the same `menu_id` in the menu table. Therefore, this column is combined with index column to create a composite primary key.
+Even after the modifications, there are still issues to be addressed. For example, the primary key for the restaurant table is `id`, which is in INT format. Both the menu and orders tables use this as a foreign key, referred to as `r_id`. However, in the menu table, `r_id` is formatted as VARCHAR, while in the orders table, it is formatted as FLOAT. To avoid errors during data uploading, the restaurant ID should be in INT format across all three tables. Additionally, there are several instances of the same `menu_id` in the menu table. Therefore, this column is combined with index column to create a composite primary key.
 
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/zomato_erd.png?raw=true)
 
