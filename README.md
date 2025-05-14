@@ -194,9 +194,18 @@ Pie chart visualizations focus on cuisine. The graph on the left presents the di
 
 The last two visualizations were shown in treemaps. The first graph visualizes the **number of orders by day of the week**, revealing that weekends (Friday to Sunday) see significantly higher order volumes compared to weekdays. This pattern suggests that customers are more likely to order food on weekends, potentially due to more leisure time or social activities. The second graph shows **order frequency by time of day**, highlighting peak order times during **lunch (12 PM to 2 PM)** and **dinner (7 PM to 9 PM)** hours. This indicates that **customers tend to place more orders during traditional meal times**, which can help restaurants optimize their operations during these peak periods.
 
-## ✅ Key Takeaway
+## 🔑 Key Takeaways
+- **Market & Consumer Trends**: Urban centers like Bangalore and Delhi lead in restaurant count and ratings. North Indian, Chinese, and South Indian cuisines dominate order volumes, reflecting regional preferences.
+- **Sales & User Behavior Insights**: A small percentage of restaurants and users drive the majority of sales. High-income users place higher-value orders, and weekends show peak order activity—critical for campaign targeting and staffing.
+- **Operational Opportunities**: Data gaps in licensing and cuisine categorization suggest the need for improved data hygiene. Balanced demand for vegetarian and non-vegetarian dishes underscores the importance of diverse menu planning.
+ 
+These insights can guide strategic decisions in marketing, inventory management, user segmentation, and operational efficiency.
 
-## 💡 Tools & Technology Used
+## 🛠️ Tools & Technology Used
+
+**`MS Excel`** **`PostgreSQL`** **`Python`** **`tableau`**
+
+In this Zomato Data Analysis project, multiple tools and technologies were integrated to ensure comprehensive data handling and insight generation. PostgreSQL was used to design the relational database schema and execute advanced SQL queries for extracting business-critical insights. Tableau served as the primary tool for interactive visualizations and dashboards, enabling clear communication of trends and findings. Python, with libraries like Pandas, Matplotlib, and Seaborn, supported data cleaning and preliminary visualization. Microsoft Excel played a supporting role in reviewing and formatting CSV files before they were imported into the database. This combination ensured a robust and scalable analytical workflow.
 
 ## 🧠 Practical Applications
 
