@@ -55,7 +55,9 @@ For additional visualizations, such as price groups, restaurants, food items, or
 
 For more details and python codes for visualizations, click the [link](https://colab.research.google.com/drive/1HsaqNjhSE_akLOapiRKfzaz7DPkM3cNT?usp=sharing).
 
-### 🧹 Data Cleaning Steps
+### 🧹 Data Cleaning Process
+
+
 
 ### 🧱 ER Diagram
 
