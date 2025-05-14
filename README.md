@@ -209,6 +209,12 @@ In this Zomato Data Analysis project, multiple tools and technologies were integ
 
 ## 🧠 Practical Applications
 
+- **Restaurant Business Strategy**: Helps restaurant owners and managers make informed decisions on pricing, menu offerings, and location strategies by understanding customer preferences, spending patterns, and city-wise performance.
+
+- **Customer Segmentation & Targeting**: Enables marketing teams to segment users based on demographics, order behavior, and spending, allowing for more targeted and effective promotional campaigns.
+
+- **Operational Optimization**: Supports improvements in supply chain and logistics planning by analyzing order trends, peak times, and cuisine popularity, which can lead to better inventory control and service delivery.
+
 ## 🛠️ How to use this repository
 
 ## 📄 Licence
