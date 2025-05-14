@@ -37,7 +37,7 @@ Python was utilized for basic visualization of key columns. For instance, visual
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/price_groups.png?raw=true" alt="Price Groups" width="31.32%" />
 </p>
 
-For additional visualizations, such as price groups, restaurants, food items, order counts, and dates, horizontal bar charts were employed.
+For additional visualizations, such as price groups, restaurants, food items, order counts, and dates, vertical bar charts were employed.
 
 <p align="center">
   <img src="https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/price-groups_bar.png?raw=true" alt="Price Groups Bar" width="28.72%" />
