@@ -1,4 +1,17 @@
 # Zomato-Data-Analysis
+<!-- Project Badges -->
+![Made with](https://img.shields.io/badge/Made%20with-SQL-blue?logo=postgresql)
+![Python](https://img.shields.io/badge/Data%20Visualization-Python-blue?logo=python)
+![License](https://img.shields.io/github/license/ShaikhBorhanUddin/Zomato_Database_Project)
+![Repo Size](https://img.shields.io/github/repo-size/ShaikhBorhanUddin/Zomato_Database_Project)
+![Stars](https://img.shields.io/github/stars/ShaikhBorhanUddin/Zomato_Database_Project?style=social)
+![Forks](https://img.shields.io/github/forks/ShaikhBorhanUddin/Zomato_Database_Project?style=social)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)
+![Tableau](https://img.shields.io/badge/BI%20Tool-Tableau-E97627?logo=Tableau&logoColor=white)
+![Git](https://img.shields.io/badge/Version%20Control-Git-orange?logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/Host-GitHub-black?logo=github)
+![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=flat-square)
+
 ![Dashboard](https://github.com/ShaikhBorhanUddin/Zomato-Data-Analysis/blob/main/Images/title.png?raw=true)
 
 The Zomato Database Analytics Project aims to conduct an in-depth exploratory data analysis and business intelligence assessment on a structured restaurant dataset sourced from Kaggle. This dataset consists of five interrelated tables. These tables capture essential information about food items, menus, customer orders, restaurant details, and user demographics. The primary objective of this project is to uncover actionable insights by addressing strategic business questions. These include identifying top-performing restaurants, understanding cuisine popularity, analyzing customer spending behavior, and revealing geographic and demographic trends. The analysis was carried out using PostgreSQL for complex queries and Python for data preprocessing and visualization.
