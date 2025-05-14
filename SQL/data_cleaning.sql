@@ -1,21 +1,17 @@
 -- 1. In `orders` table some input under `currency` column is in USD. It has to be converted to INR.
-
 SELECT * FROM orders
 WHERE currency = 'USD';
-
 -- Also, 'sales_amount` corresponding to those 'currency' has to be converted accordingly. Here, 1 USD = 82.5 INR (approximately on entry day) is used.
-
 UPDATE orders
 SET currency = 'INR',
     sales_amount = sales_amount * 82.5
 WHERE currency = 'USD';
-
 ------------------------------------------------
--- 2. Clean the rating Column (Replace '--' and Blank With NULL)
+-- 2. There are some blank entries in 'rating' column. Also, there are some '--' entries which also mean blank entries. both these need to be converted as null.
 UPDATE restaurant
 SET rating = NULL
 WHERE rating IS NULL OR rating IN ('--', '');
--- Convert rating to FLOAT
+-- The 'rating' column is in 'TEXT' format. It should be converted to 'FLOAT' for consistency and further calculation.
 ALTER TABLE restaurant
 ALTER COLUMN rating TYPE FLOAT
 USING rating::FLOAT;
@@ -47,7 +43,7 @@ WHERE r_id NOT IN (
 -- Remove all characters except digits and the decimal point.
 UPDATE restaurant
 SET cost = REGEXP_REPLACE(cost, '[^0-9.]', '', 'g');
--- Convert cost column to FLOAT
+-- Convert 'cost' column from VARCHAR to FLOAT
 ALTER TABLE restaurant
 ALTER COLUMN cost TYPE FLOAT
 USING cost::FLOAT;
