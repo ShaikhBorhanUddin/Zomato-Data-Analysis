@@ -7,7 +7,7 @@ SET currency = 'INR',
     sales_amount = sales_amount * 82.5
 WHERE currency = 'USD';
 ------------------------------------------------
--- 2. There are some blank entries in 'rating' column. Also, there are some '--' entries which also mean blank entries. both these need to be converted as null.
+-- 2. There are some blank entries in 'rating' column. Also, there are some '--' entries which also mean blank entries. Both these need to be converted as null.
 UPDATE restaurant
 SET rating = NULL
 WHERE rating IS NULL OR rating IN ('--', '');
