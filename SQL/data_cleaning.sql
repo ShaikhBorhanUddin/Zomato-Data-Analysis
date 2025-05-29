@@ -16,7 +16,7 @@ ALTER TABLE restaurant
 ALTER COLUMN rating TYPE FLOAT
 USING rating::FLOAT;
 -----------------------------------------------
--- 3. price in menu table is in VARCHAR format. it will be converted to FLOAT.
+-- 3. `price` in menu table is in VARCHAR format. It will be converted to FLOAT.
 -- First add a temporary float column (if needed)
 ALTER TABLE menu ADD COLUMN price_clean FLOAT;
 -- Update the new column with converted float values
